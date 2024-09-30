@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-  "start": "NODE_ENV=production npm --omit=dev && node server.js"
+  "start": "node server.js"
 }
 ,
+"engines": {
+    "node": "20.x"
+  },
   "author": "",
   "license": "ISC",
   "description": ""
