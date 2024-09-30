@@ -3,7 +3,7 @@ const { getDate } = require('./utils');
 
 class GreetingService {
     getGreetingMessage(name) {
-        const date = getDate();  // Get the current server date and time
+        const date = getDate(); 
         return `<span style="color:blue">${messages.greet(name, date)}</span>`;
     }
 }
