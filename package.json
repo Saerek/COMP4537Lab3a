@@ -1,14 +1,8 @@
 {
-  "name": "lab-3-c",
+  "name": "",
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
-  },
-  "engines": {
-    "node": "18.x"
-  },
-  "author": "",
-  "license": "ISC",
-  "description": "Lab 3 Node.js project for COMP 4537"
+    "start": "node server.js" 
+  }
 }
