@@ -20,16 +20,18 @@ class ServerController {
 
         res.setHeader('Content-Type', 'text/html');
 
-        // Route matching using pathname.includes
-        if (pathname.includes('/writeFile')) {
+        if (pathname === '/') {
+            res.writeHead(302, { Location: '/getDate/?name=Guest' });
+            res.end();
+        } else if (pathname.includes('/writeFile')) {
             this.writeFile(query.text, res);
         } else if (pathname.includes('/readFile')) {
             const filePath = path.join(__dirname, 'file.txt');
             this.readFile(filePath, res);
         } else if (pathname.includes('/getDate')) {
-            this.greetUser(query, res);  // Delegate greeting to GreetingService
+            this.greetUser(query, res);
         } else {
-            this.handleNotFound(res);  // Return 404 for unmatched routes
+            this.handleNotFound(res);
         }
     }
 
